@@ -6,7 +6,9 @@ body {
 #top-bar {
 	background-color: #055ba0;
 	color: white;
-	height: 55px;
+	height: 60px;
+    font-family: 'Fjalla One', sans-serif;
+    min-width: 700px;
 }
 
 #main-section {
@@ -14,7 +16,7 @@ body {
 }
 
 .lefty {
-	margin: 0px 0px 15px 5px;
+	margin: 0px 0px 0px 5px;
 	padding-top: 5px;
 	float: left;
 }
