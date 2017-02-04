@@ -7,6 +7,11 @@ var sessionTime = 60,
 
 $("#start").click(function(){
 	if(!clockStart) {
+		if($("#phase").html() === "&nbsp;") {
+			$("#phase").html("Session");
+			setDisplay();
+		}
+		
 		startTimer = setInterval(timeOn, 1000);
 		clockStart = true;
 		$("#start").html("<h3>Pause</h3>");
@@ -55,9 +60,6 @@ $("input").change(function(){
 });
 
 function timeOn() {
-	if($("#phase").html() === "&nbsp;") {
-			$("#phase").html("Session");
-		}
 	if(seconds === -1) {
 		if(sessionOn) {
 			sessionOn = false;
@@ -71,13 +73,17 @@ function timeOn() {
 			$("#phase").html("Session");
 		}
 	}
+	setDisplay();
+	seconds--;
+}
+
+function setDisplay() {
 	var hour = Math.floor(seconds/3600);
 	var min = Math.floor(seconds/60%60);
 	var sec = seconds%60;
 	$("#hours").html(zero(hour)+hour);
 	$("#minutes").html(zero(min)+min);
 	$("#seconds").html(zero(sec)+sec);
-	seconds--;
 }
 
 function zero(n) {
