@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div id="top-bar">
+		<div class="lefty">
+			Session Duration <br />
+			<ul>
+				<li>Hours: <input type="number"  class="session" id="work-hours" value="0" data-hours="yes"></li>
+				<li>Minutes: <input type="number" class="session" id="work-min" value="1"></li>
+				<li>Seconds: <input type="number" class="session" id="work-sec" value="0"></li>
+			</ul>
+		</div>
+
+		<div class="righty">
+			<span style="float:right">Break Duration</span>
+			<br />
+			<ul>
+				<li>Hours: <input type="number" class="break" id="rest-hours" value="0"></li>
+				<li>Minutes: <input type="number" class="break" id="rest-min" value="1"></li>
+				<li>Seconds: <input type="number" class="break" id="rest-sec" value="0"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="main-section">
+		<h2 id="phase">&nbsp;</h2>
+		<h1><span id="hours">00</span><span class="colon">:</span><span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span></h1>
+		<div id="start" class="control">
+			<h3>Start</h3>
+		</div>
+
+		<div id="reset" class="control">
+			<h3>Reset</h3>
+		</div>
+	</div>
+	<script src="scripts/scripts.js"></script>
+</body>
+</html>
