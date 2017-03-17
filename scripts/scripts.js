@@ -80,7 +80,7 @@ function timeOn() {
 function setDisplay() {
 	// Math.floor prevents remaining seconds from being added to hours and minutes. IE: 90 seconds will round down to 1 minute rather than 1.50 minutes.
 	var hour = Math.floor(seconds/3600); 
-	var min = Math.floor(seconds/60);
+	var min = Math.floor(seconds/60%60);
 	var sec = seconds%60;
 	$("#hours").html(zero(hour)+hour);
 	$("#minutes").html(zero(min)+min);
